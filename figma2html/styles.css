@@ -1,0 +1,288 @@
+.1_3 {
+	overflow: hidden;
+}
+
+.page_container {
+	background-color: rgba(235.0000011920929, 242.00000077486038, 250.00000029802322, 1);
+	width: 1440px;
+	height: 1024px;
+	position: absolute;
+}
+
+.top_left_container {
+	background-color: rgba(113.68749797344208, 113.68749797344208, 113.68749797344208, 1);
+	width: 338px;
+	height: 235px;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 53px;
+	top: 83px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.page_title {
+	color: rgba(235.0000011920929, 242.00000077486038, 250.00000029802322, 1);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	margin: 10px;
+	padding: 10px;
+	font-family: Bahnschrift;
+	text-align: center;
+	font-size: 38px;
+	letter-spacing: 0;
+}
+
+.middle_left_container {
+	background-color: rgba(112.000000923872, 163.00000548362732, 127.00000002980232, 1);
+	width: 338px;
+	height: 400px;
+	position: absolute;
+	left: 53px;
+	top: 373px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.bottom_left_container {
+	background-color: slategray;
+	width: 338px;
+	height: 110px;
+	position: absolute;
+	left: 53px;
+	top: 830px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.notes_title {
+	color: rgba(235.0000011920929, 242.00000077486038, 250.00000029802322, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 40px;
+	font-family: Bahnschrift;
+	font-size: 30px;
+	letter-spacing: 0;
+}
+
+.light_green_container {
+	background-color: rgba(150.6713542342186, 193.37499797344208, 163.23124587535858, 1);
+	width: 299px;
+	height: 271px;
+	position: absolute;
+	left: 20px;
+	top: 100px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.middle_container {
+	background-color: steelblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 443px;
+	height: 859px;
+	position: absolute;
+	left: 446px;
+	top: 83px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.washer_title {
+	color: rgba(235.0000011920929, 242.00000077486038, 250.00000029802322, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 40px;
+	font-family: Bahnschrift;
+	font-size: 30px;
+	letter-spacing: 0;
+}
+
+.blue_container {
+	background-color: steelblue;
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	width: 400px;
+	height: 82px;
+	position: relative;
+	left: 20px;
+	top: -50px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.washer_time {
+	color: rgba(255, 255, 255, 1);
+	height: 49px;
+	position: absolute;
+	left: 20px;
+	top: 25px;
+	font-family: Bahnschrift;
+	text-align: center;
+	font-size: 28px;
+	letter-spacing: 0;
+}
+
+.name {
+	color: rgba(255, 255, 255, 1);
+	font-family: Bahnschrift;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 15px;
+	margin-left: 30px;
+	font-size: 18px;
+}
+
+.text_box {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin-top: 5px;
+	margin-left: 130px;
+	z-index: 1000;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-width: 0px;
+	font-family: Bahnschrift;
+}
+
+.button {
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	width: 65px;
+	height: 30px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	justify-content: center;
+	align-content: flex-start;
+	z-index: 1000;
+	margin-left: 320px;
+	margin-top: -10px;
+	background-color: slategray;
+	font-family: Bahnschrift;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-size: 18px;
+}
+
+.reset {
+	color: rgba(255, 255, 255, 1);
+	border: none;
+	width: 200px;
+	height: 50px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	justify-content: center;
+	align-content: flex-start;
+	z-index: 1000;
+	margin-left: 70px;
+	margin-top: 30px;
+	border-color: white;
+	background-color: slategray;
+	border-style: solid;
+	border-width: 2px;
+	font-family: Bahnschrift;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-size: 18px;
+}
+
+.right_container {
+	background-color: palevioletred;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 443px;
+	height: 859px;
+	position: absolute;
+	left: 944px;
+	top: 83px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+.dryers_title {
+	color: rgba(235.0000011920929, 242.00000077486038, 250.00000029802322, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 40px;
+	font-family: Bahnschrift;
+	font-size: 30px;
+	letter-spacing: 0;
+}
+
+.pink_container {
+	background-color: palevioletred;
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
+	width: 400px;
+	height: 82px;
+	position: relative;
+	left: 20px;
+	top: -50px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.dryer_time {
+	color: rgba(255, 255, 255, 1);
+	height: 49px;
+	position: absolute;
+	left: 20px;
+	top: 25px;
+	font-family: Bahnschrift;
+	text-align: center;
+	font-size: 28px;
+	letter-spacing: 0;
+}
+
+.countdown {
+	position: relative;
+	z-index: 1000;
+	color: rgba(255, 255, 255, 1);
+	font-family: Bahnschrift;
+	font-size: 20px;
+	text-align: center;
+}

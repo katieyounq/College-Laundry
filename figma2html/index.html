@@ -1,0 +1,329 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Html Generated</title>
+    <meta name="description" content="Figma htmlGenerator">
+    <meta name="author" content="htmlGenerator">
+    <link href="https://fonts.googleapis.com/css?family=Bahnschrift&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /*
+                Figma Background for illustrative/preview purposes only.
+                You can remove this style tag with no consequence
+              */
+        body {
+            background: #E5E5E5;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        .open-button {
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 1000;
+        }
+
+
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+
+            .form-container textarea {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+                resize: none;
+                min-height: 200px;
+            }
+
+
+                .form-container textarea:focus {
+                    background-color: #ddd;
+                    outline: none;
+                }
+
+
+            .form-container .btn {
+                background-color: #04AA6D;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 10px;
+                opacity: 0.8;
+            }
+
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: red;
+            }
+
+
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
+    </style>
+
+    <script>
+        var numSlots = 12;
+
+        function book(containerID, nameID, buttonID, color) {
+            document.getElementById(containerID).style.backgroundColor = color;
+            document.getElementById(nameID).style.border = "solid white";
+            // this changes the color
+            document.getElementById(nameID).disabled = true;
+            // this fixes the text input
+            document.getElementById(buttonID).style.display = 'none';
+        }
+
+        // function reset(containerID, color){
+        // for (i = 0; i < numSlots; i++) {
+        //   var getValue= document.getElementById("name" + i);
+        //     if (getValue.value !="") {
+        //         getValue.value = "";
+        //     }
+
+        // }
+
+        //   document.getElementById(containerID).style.backgroundColor = color;
+        // }
+
+        // function reset() {
+        //     var name = "name";
+        //     for (i = 0; i < numSlots; i++) {
+        //         var getValue= document.getElementById(name.concat(i));
+        //           if (getValue.value !="") {
+        //               getValue.value = "";
+        //           }
+        //       }
+        // }
+
+        // function reset() {
+        //     var getValue = document.getElementById("name1");
+        //     if (getValue.value != "") {
+        //         getValue.value = "";
+        //     }
+
+        //     document.getElementById("blue_container1").style.backgroundColor = "steelblue";
+        //     // bring button back
+        //     document.getElementById("bookButton1").style.display = 'block';
+        //     // let text be editable again
+        //     document.getElementById("name1").disabled = false;
+        // }
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        // Timer
+
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            var interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "Laundry done!";
+                }
+            }, 1000);
+        }
+
+        function startCountdown1() {
+            var thirtyMinutes = 30 * 60,
+                display = document.querySelector('#time1');
+            startTimer(thirtyMinutes, display);
+        }
+        function startCountdown2() {
+            var sixtyMinutes = 60 * 60,
+                display = document.querySelector('#time2');
+            startTimer(sixtyMinutes, display);
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class=page_container>
+
+        <div class="middle_container">
+            <span class="washer_title">WASHERS</span>
+            <div id="blue_container1" class="blue_container">
+                <span class="washer_time">7:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name1" name="name">
+                <button id="bookButton1" class="button button" onclick="book('blue_container1', 'name1', 'bookButton1', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container2" class="blue_container">
+                <span class="washer_time">8:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name2" name="name">
+                <button id="bookButton2" class="button button" onclick="book('blue_container2', 'name2', 'bookButton2', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container3" class="blue_container">
+                <span class="washer_time">9:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name3" name="name">
+                <button id="bookButton3" class="button button" onclick="book('blue_container3', 'name3', 'bookButton3', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container4" class="blue_container">
+                <span class="washer_time">10:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name4" name="name">
+                <button id="bookButton4" class="button button" onclick="book('blue_container4', 'name4', 'bookButton4', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container5" class="blue_container">
+                <span class="washer_time">11:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name5" name="name">
+                <button id="bookButton5" class="button button" onclick="book('blue_container5', 'name5', 'bookButton5', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container6" class="blue_container">
+                <span class="washer_time">12:00PM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name6" name="name">
+                <button id="bookButton6" class="button button" onclick="book('blue_container6', 'name6', 'bookButton6', 'lightblue')">BOOK</button>
+            </div>
+        </div>
+
+        <div class="top_left_container">
+            <span class="page_title">COLLEGE LAUNDRY <br>&#10024;BUDDY &#129530;</span>
+        </div>
+
+        <div class="middle_left_container">
+            <span class="notes_title">NOTES:</span>
+            <div class="light_green_container">
+            </div>
+            <div class="countdown">
+                <p id="time1">30:00</p>
+                <button onclick="startCountdown1()">Washer Started</button>
+            </div>
+            <div class="countdown">
+                <p id="time2">60:00</p>
+                <button onclick="startCountdown2()">Dryer Started</button>
+            </div>
+        </div>
+
+        <div class="bottom_left_container">
+            <button class="reset" onClick="window.location.reload();">RESET</button>
+        </div>
+
+        <div class="right_container">
+            <span class="dryers_title">DRYERS</span>
+            <div id="pink_container1" class="pink_container">
+                <span class="dryer_time">7:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name7" name="name">
+                <button id="bookButton7" class="button button" onclick="book('pink_container1', 'name7', 'bookButton7', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container2" class="pink_container">
+                <span class="dryer_time">8:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name8" name="name">
+                <button id="bookButton8" class="button button" onclick="book('pink_container2', 'name8', 'bookButton8', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container3" class="pink_container">
+                <span class="dryer_time">9:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name9" name="name">
+                <button id="bookButton9" class="button button" onclick="book('pink_container3', 'name9', 'bookButton9', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container4" class="pink_container">
+                <span class="dryer_time">10:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name10" name="name">
+                <button id="bookButton10" class="button button" onclick="book('pink_container4', 'name10', 'bookButton10', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container5" class="pink_container">
+                <span class="dryer_time">11:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name11" name="name">
+                <button id="bookButton11" class="button button" onclick="book('pink_container5', 'name11', 'bookButton11', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container6" class="pink_container">
+                <span class="dryer_time">12:00PM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name12" name="name">
+                <button id="bookButton12" class="button button" onclick="book('pink_container6', 'name12', 'bookButton12', 'pink')">BOOK</button>
+            </div>
+        </div>
+
+        <div class=container_left_middle>
+
+
+        </div>
+        <div class=right_align_container>
+
+        </div>
+    </div>
+
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+</body>
+</html>
