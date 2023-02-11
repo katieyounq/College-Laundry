@@ -1,0 +1,292 @@
+@use "utils" as *;
+
+$color_type_0: rgb(103, 1, 184);
+$color_type_1: rgb(17, 17, 17);
+$color_type_2: rgb(179, 179, 179);
+$color_type_3: rgb(18, 217, 98);
+$color_type_4: rgb(217, 217, 217);
+$color_type_5: rgb(242, 255, 71);
+$color_type_6: rgb(245, 119, 194);
+$color_type_7: rgb(253, 139, 28);
+$color_type_8: rgb(255, 138, 30);
+$color_type_9: rgb(255, 255, 255);
+$color_type_10: rgb(42, 42, 42);
+$color_type_11: rgb(68, 68, 68);
+
+$border_radius_type_0: 5px 5px 5px 5px;
+
+$font_type_0: 400 21px/1.14 "Roboto", Helvetica, Arial, serif;
+$font_type_1: 400 10px/1.1 "Roboto", Helvetica, Arial, serif;
+
+.root {
+  @include flex-column;
+  background-color: $color_type_1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0px;
+}
+.rect {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 66px;
+  left: -215px;
+}
+.flexCol {
+  @include flex-column;
+  position: relative;
+  flex-grow: 1;
+  min-height: 0px;
+  margin: 75px 9px 41px 14px;
+}
+.flexCol1 {
+  @include flex-column;
+  position: relative;
+  min-height: 0px;
+  margin: 0px 0px 0px 4px;
+}
+.flexCol2 {
+  @include flex-column;
+  position: relative;
+  min-height: 0px;
+  margin: 0px 10px 0px 0px;
+}
+.subtitle {
+  @include font-face($font_type_0, $color_type_9, -0.63px);
+  position: relative;
+  min-height: 0px;
+}
+.flexCol3 {
+  @include flex-column;
+  position: relative;
+  min-height: 0px;
+  margin: 16px 0px 0px;
+}
+.flexRow {
+  display: flex;
+  position: relative;
+  min-height: 0px;
+}
+.rect1 {
+  background-color: $color_type_10;
+  border-radius: $border_radius_type_0;
+  position: relative;
+  flex: 0 1 173px;
+  min-height: 52px;
+}
+.flexRow__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 7px;
+}
+.flexRow1 {
+  display: flex;
+  position: relative;
+  min-height: 0px;
+  margin: 6px 0px 0px;
+}
+.flexRow1__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 7px;
+}
+.flexRow1__spacer1 {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 7px;
+}
+.flexRow2 {
+  display: flex;
+  position: relative;
+  min-height: 0px;
+  margin: 22px 0px 0px;
+}
+.rect2 {
+  background-color: $color_type_4;
+  position: relative;
+  flex: 0 1 45px;
+  min-height: 45px;
+}
+.flexRow2__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 10px;
+}
+.flexCol4 {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 216px;
+  min-height: 0px;
+  margin: 5px 0px 3px;
+}
+.info {
+  @include font-face($font_type_1, $color_type_2, -0.3px);
+  position: relative;
+  min-height: 0px;
+}
+.subtitle1 {
+  @include font-face($font_type_0, $color_type_9, -0.63px);
+  position: relative;
+  min-height: 0px;
+  margin: 2px 0px 0px;
+}
+.flexRow3 {
+  display: flex;
+  position: relative;
+  min-height: 0px;
+  margin: 16px 0px 0px;
+}
+.content_box {
+  @include flex-column;
+  background-color: $color_type_3;
+  border-radius: $border_radius_type_0;
+  position: relative;
+  flex: 0 1 103px;
+  min-height: 0px;
+}
+.flexCol5 {
+  @include flex-column;
+  position: relative;
+  flex-grow: 1;
+  min-height: 0px;
+  margin: 34px 0px 6px;
+}
+.rect7 {
+  background-color: $color_type_6;
+  position: relative;
+  min-height: 37px;
+}
+.flexCol6 {
+  @include flex-column;
+  position: relative;
+  min-height: 0px;
+}
+.rect8 {
+  background-color: $color_type_7;
+  position: relative;
+  min-height: 37px;
+}
+.rect9 {
+  background-color: $color_type_0;
+  position: relative;
+  min-height: 37px;
+}
+.flexRow3__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 14px;
+}
+.flexRow4 {
+  @include flex-item(0, 1, 220px);
+  min-height: 0px;
+}
+.rect3 {
+  background-color: $color_type_5;
+  border-radius: $border_radius_type_0;
+  position: relative;
+  flex: 0 1 103px;
+  min-height: 151px;
+}
+.flexRow4__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 14px;
+}
+.rect4 {
+  background-color: $color_type_8;
+  border-radius: $border_radius_type_0;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.247);
+  position: relative;
+  flex: 0 1 103px;
+  min-height: 151px;
+}
+.flexRow3__item {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 12px;
+}
+.image {
+  width: 100%;
+  height: min-content;
+  aspect-ratio: 0.08;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  min-height: 0px;
+}
+.flexCol7 {
+  @include flex-column;
+  position: relative;
+  min-height: 0px;
+  margin: 200px 5px 0px 0px;
+}
+.rect6 {
+  background-color: $color_type_11;
+  border-radius: $border_radius_type_0;
+  position: relative;
+  min-height: 52px;
+}
+.flexRow5 {
+  display: flex;
+  width: 64.64%;
+  position: relative;
+  min-height: 0px;
+  margin: 12px auto 0px;
+}
+.flexRow5__item {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 20px;
+}
+.icon1 {
+  width: 20px;
+  height: min-content;
+  aspect-ratio: 0.95;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  min-height: 0px;
+  min-width: 20px;
+  margin: 0px 0px 1px;
+}
+.flexRow5__spacer {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 86px;
+}
+.icon2 {
+  width: 20px;
+  height: min-content;
+  aspect-ratio: 1;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  min-height: 0px;
+  min-width: 20px;
+  margin: 2px 0px 0px;
+}
+.flexRow5__spacer1 {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 87px;
+}
+.flexRow5__item1 {
+  @include flex-column;
+  position: relative;
+  flex: 0 1 21px;
+}
+.image6 {
+  width: 21px;
+  height: min-content;
+  aspect-ratio: 1.05;
+  vertical-align: top;
+  object-fit: cover;
+  object-position: center center;
+  position: relative;
+  min-height: 0px;
+  min-width: 21px;
+  margin: 2px 0px 0px;
+}
