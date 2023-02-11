@@ -172,9 +172,14 @@
             }, 1000);
         }
 
-        function startCountdown() {
+        function startCountdown1() {
+            var thirtyMinutes = 30 * 60,
+                display = document.querySelector('#time1');
+            startTimer(thirtyMinutes, display);
+        }
+        function startCountdown2() {
             var sixtyMinutes = 60 * 60,
-                display = document.querySelector('#time');
+                display = document.querySelector('#time2');
             startTimer(sixtyMinutes, display);
         }
     </script>
@@ -237,10 +242,13 @@
             <span class="notes_title">NOTES:</span>
             <div class="light_green_container">
             </div>
-            <!-- <input type="button" value="clear" onclick="reset()"> -->
             <div class="countdown">
-                <p id="time">60:00</p>
-                <button onclick="startCountdown()">Laundry Started</button>
+                <p id="time1">30:00</p>
+                <button onclick="startCountdown1()">Washer Started</button>
+            </div>
+            <div class="countdown">
+                <p id="time2">60:00</p>
+                <button onclick="startCountdown2()">Dryer Started</button>
             </div>
         </div>
 
