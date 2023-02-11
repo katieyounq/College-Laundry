@@ -10,7 +10,7 @@
 }
 
 .top_left_container {
-	background-color: rgba(113.68749797344208, 113.68749797344208, 113.68749797344208, 1);
+	background-color: slategrey;
 	width: 338px;
 	height: 235px;
 	position: absolute;
@@ -285,4 +285,51 @@
 	font-family: Bahnschrift;
 	font-size: 20px;
 	text-align: center;
+}
+
+.chatTitle {
+	color: rgba(255, 255, 255, 1);
+	font-family: Bahnschrift;
+	font-size: 40px;
+	text-align: center;
+}
+
+.msgPlacehoder {
+	font-family: Bahnschrift;
+	font-size: 10px;
+	text-align: left;
+}
+
+.countdown1 {
+	background-color: white;
+	border: none;
+	color: slategray;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.countdown2 {
+	background-color: white;
+	border: none;
+	color: slategray;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
