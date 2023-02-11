@@ -74,7 +74,10 @@
 }
 
 .middle_container {
-	background-color: rgba(66.00000366568565, 122.00000032782555, 161.0000056028366, 1);
+	background-color: steelblue;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 443px;
 	height: 859px;
 	position: absolute;
@@ -98,13 +101,16 @@
 	letter-spacing: 0;
 }
 
-.light_blue_container {
-	background-color: rgba(118.92916470766068, 164.06565070152283, 195.49999594688416, 1);
+.blue_container {
+	background-color: steelblue;
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
 	width: 400px;
 	height: 82px;
-	position: absolute;
+	position: relative;
 	left: 20px;
-	top: 100px;
+	top: -50px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -125,6 +131,7 @@
 
 .name {
 	color: rgba(255, 255, 255, 1);
+	font-family: Bahnschrift;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -147,6 +154,7 @@
 	border-top-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
+	border-width: 0px;
 	font-family: Bahnschrift;
 }
 
@@ -156,9 +164,11 @@
 	width: 65px;
 	height: 30px;
 	position: relative;
-	display: flex;
+	display: inline-block;
+	text-align: center;
 	justify-content: center;
 	align-content: flex-start;
+	align-text: center;
 	z-index: 1000;
 	margin-left: 320px;
 	margin-top: -10px;
@@ -172,7 +182,10 @@
 }
 
 .right_container {
-	background-color: rgba(46.000001057982445, 41.00000135600567, 78.00000295042992, 1);
+	background-color: palevioletred;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	width: 443px;
 	height: 859px;
 	position: absolute;
@@ -196,13 +209,16 @@
 	letter-spacing: 0;
 }
 
-.light_purple_container {
-	background-color: rgba(100.07601276040077, 95.2929662168026, 130.68749696016312, 1);
+.pink_container {
+	background-color: palevioletred;
+	border-color: white;
+	border-style: solid;
+	border-width: 2px;
 	width: 400px;
 	height: 82px;
-	position: absolute;
+	position: relative;
 	left: 20px;
-	top: 100px;
+	top: -50px;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom-left-radius: 10px;
@@ -220,6 +236,3 @@
 	font-size: 28px;
 	letter-spacing: 0;
 }
-
-
-

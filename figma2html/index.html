@@ -20,12 +20,48 @@
     </style>
 
     <script>
-        function myFunction() {
-            document.getElementById("light_blue_container").style.backgroundColor = "grey";
+        var numSlots = 12;
+
+        function book(containerID, nameID, buttonID, color) {
+            document.getElementById(containerID).style.backgroundColor = color;
+            document.getElementById(nameID).style.border = "solid white";
             // this changes the color
-            document.getElementById('Name').disabled = true;
+            document.getElementById(nameID).disabled = true;
             // this fixes the text input
-            document.getElementById('bookButton').style.display = 'none';
+            document.getElementById(buttonID).style.display = 'none';
+        }
+
+        // function reset(containerID, color){
+        //   for (i = 0; i < numSlots; i++) {
+        //     var getValue= document.getElementById("name" + i);
+        //       if (getValue.value !="") {
+        //           getValue.value = "";
+        //       }
+
+        //   }
+
+        //   document.getElementById(containerID).style.backgroundColor = color;
+        // }
+
+        function reset() {
+            var getValue = document.getElementById("name1");
+            if (getValue.value != "") {
+                getValue.value = "";
+            }
+
+            document.getElementById("blue_container1").style.backgroundColor = "steelblue";
+            // bring button back
+            document.getElementById("bookButton1").style.display = 'block';
+            // let text be editable again
+            document.getElementById("name1").disabled = false;
+        }
+
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
         }
     </script>
 
@@ -36,11 +72,46 @@
 
         <div class="middle_container">
             <span class="washer_title">WASHERS</span>
-            <div id="light_blue_container" class="light_blue_container">
+            <div id="blue_container1" class="blue_container">
                 <span class="washer_time">7:00AM</span>
-                <label class="name" for="Name">Name:</label>
-                <input class="text_box" type="text" id="Name" name="Name">
-                <button id="bookButton" class="button button" onclick="myFunction()">BOOK</button>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name1" name="name">
+                <button id="bookButton1" class="button button" onclick="book('blue_container1', 'name1', 'bookButton1', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container2" class="blue_container">
+                <span class="washer_time">8:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name2" name="name">
+                <button id="bookButton2" class="button button" onclick="book('blue_container2', 'name2', 'bookButton2', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container3" class="blue_container">
+                <span class="washer_time">9:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name3" name="name">
+                <button id="bookButton3" class="button button" onclick="book('blue_container3', 'name3', 'bookButton3', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container4" class="blue_container">
+                <span class="washer_time">10:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name4" name="name">
+                <button id="bookButton4" class="button button" onclick="book('blue_container4', 'name4', 'bookButton4', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container5" class="blue_container">
+                <span class="washer_time">11:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name5" name="name">
+                <button id="bookButton5" class="button button" onclick="book('blue_container5', 'name5', 'bookButton5', 'lightblue')">BOOK</button>
+            </div>
+
+            <div id="blue_container6" class="blue_container">
+                <span class="washer_time">12:00PM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name6" name="name">
+                <button id="bookButton6" class="button button" onclick="book('blue_container6', 'name6', 'bookButton6', 'lightblue')">BOOK</button>
             </div>
         </div>
 
@@ -52,25 +123,77 @@
             <span class="notes_title">NOTES:</span>
             <div class="light_green_container">
             </div>
+            <input type="button" value="clear" onclick="reset()">
         </div>
 
         <div class="right_container">
             <span class="dryers_title">DRYERS</span>
-            <div class="light_purple_container">
+            <div id="pink_container1" class="pink_container">
                 <span class="dryer_time">7:00AM</span>
-                <label class="name" for="Name">Name:</label>
-                <input class="text_box" type="text" id="Name" name="Name">
-                <button id="bookButton" class="button button" onclick="myFunction()">BOOK</button>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name7" name="name">
+                <button id="bookButton7" class="button button" onclick="book('pink_container1', 'name7', 'bookButton7', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container2" class="pink_container">
+                <span class="dryer_time">8:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name8" name="name">
+                <button id="bookButton8" class="button button" onclick="book('pink_container2', 'name8', 'bookButton8', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container3" class="pink_container">
+                <span class="dryer_time">9:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name9" name="name">
+                <button id="bookButton9" class="button button" onclick="book('pink_container3', 'name9', 'bookButton9', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container4" class="pink_container">
+                <span class="dryer_time">10:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name10" name="name">
+                <button id="bookButton10" class="button button" onclick="book('pink_container4', 'name10', 'bookButton10', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container5" class="pink_container">
+                <span class="dryer_time">11:00AM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name11" name="name">
+                <button id="bookButton11" class="button button" onclick="book('pink_container5', 'name11', 'bookButton11', 'pink')">BOOK</button>
+            </div>
+
+            <div id="pink_container6" class="pink_container">
+                <span class="dryer_time">12:00PM</span>
+                <label class="name" for="name">NAME:</label>
+                <input class="text_box" type="text" id="name12" name="name">
+                <button id="bookButton12" class="button button" onclick="book('pink_container6', 'name12', 'bookButton12', 'pink')">BOOK</button>
             </div>
         </div>
 
-    <div class=container_left_middle>
-        
-        
+        <div class=container_left_middle>
+
+
         </div>
-    <div class=right_align_container>
-        
+        <div class=right_align_container>
+
         </div>
     </div>
+
+
+    <button class="open-button" onclick="openForm()">Chat</button>
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
 </body>
 </html>
