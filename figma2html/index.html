@@ -21,7 +21,7 @@
 
     <script>
         function myFunction() {
-            document.getElementById("light_blue_container").style.backgroundColor = "pink";
+            document.getElementById("light_blue_container").style.backgroundColor = "grey";
             // this changes the color
             document.getElementById('Name').disabled = true;
             // this fixes the text input
@@ -33,31 +33,43 @@
 
 <body>
     <div class=page_container>
+
         <div class="middle_container">
             <span class="washer_title">WASHERS</span>
+            <div id="light_blue_container" class="light_blue_container">
+                <span class="washer_time">7:00AM</span>
+                <label class="name" for="Name">Name:</label>
+                <input class="text_box" type="text" id="Name" name="Name">
+                <button id="bookButton" class="button button" onclick="myFunction()">BOOK</button>
+            </div>
         </div>
-    <div class="top_left_container">
 
-    </div>
-    <div class="bottom_left_container">
+        <div class="top_left_container">
+            <span class="page_title">WELCOME 2 COLLEGE LAUNDRY :)</span>
+        </div>
 
-    </div>
-    <div class="right_container"></div>
-    
-    <span class="notes_title">NOTES:</span>
-    <span class="page_title">WELCOME 2 COLLEGE LAUNDRY :)</span>
-    <span class="dryers_title">DRYERS</span>
+        <div class="bottom_left_container">
+            <span class="notes_title">NOTES:</span>
+            <div class="light_green_container">
+            </div>
+        </div>
+
+        <div class="right_container">
+            <span class="dryers_title">DRYERS</span>
+            <div class="light_purple_container">
+                <span class="dryer_time">7:00AM</span>
+                <label class="name" for="Name">Name:</label>
+                <input class="text_box" type="text" id="Name" name="Name">
+                <button id="bookButton" class="button button" onclick="myFunction()">BOOK</button>
+            </div>
+        </div>
+
     <div class=container_left_middle>
-        <div id="light_blue_container" class="light_blue_container">
-            <button id="bookButton" class="button button" onclick="myFunction()">BOOK</button>
-            <label for="Name">Name:</label>
-            <input type="text" id="Name" name="Name">
+        
+        
         </div>
-        <div class="light_green_container"></div>
-        <span class="washer_time">7:00AM</span></div>
     <div class=right_align_container>
-        <div class="light_purple_container"></div>
-        <span class="dryer_time">7:00AM</span>
+        
         </div>
     </div>
 </body>
