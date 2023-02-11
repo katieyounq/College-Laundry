@@ -95,7 +95,6 @@
             .form-container .btn:hover, .open-button:hover {
                 opacity: 1;
             }
-
     </style>
 
     <script>
@@ -111,29 +110,39 @@
         }
 
         // function reset(containerID, color){
-        //   for (i = 0; i < numSlots; i++) {
-        //     var getValue= document.getElementById("name" + i);
-        //       if (getValue.value !="") {
-        //           getValue.value = "";
-        //       }
+        // for (i = 0; i < numSlots; i++) {
+        //   var getValue= document.getElementById("name" + i);
+        //     if (getValue.value !="") {
+        //         getValue.value = "";
+        //     }
 
-        //   }
+        // }
 
         //   document.getElementById(containerID).style.backgroundColor = color;
         // }
 
-        function reset() {
-            var getValue = document.getElementById("name1");
-            if (getValue.value != "") {
-                getValue.value = "";
-            }
+        // function reset() {
+        //     var name = "name";
+        //     for (i = 0; i < numSlots; i++) {
+        //         var getValue= document.getElementById(name.concat(i));
+        //           if (getValue.value !="") {
+        //               getValue.value = "";
+        //           }
+        //       }
+        // }
 
-            document.getElementById("blue_container1").style.backgroundColor = "steelblue";
-            // bring button back
-            document.getElementById("bookButton1").style.display = 'block';
-            // let text be editable again
-            document.getElementById("name1").disabled = false;
-        }
+        // function reset() {
+        //     var getValue = document.getElementById("name1");
+        //     if (getValue.value != "") {
+        //         getValue.value = "";
+        //     }
+
+        //     document.getElementById("blue_container1").style.backgroundColor = "steelblue";
+        //     // bring button back
+        //     document.getElementById("bookButton1").style.display = 'block';
+        //     // let text be editable again
+        //     document.getElementById("name1").disabled = false;
+        // }
 
         function openForm() {
             document.getElementById("myForm").style.display = "block";
@@ -141,6 +150,32 @@
 
         function closeForm() {
             document.getElementById("myForm").style.display = "none";
+        }
+
+        // Timer
+
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            var interval = setInterval(function () {
+                minutes = parseInt(timer / 60, 10)
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "Laundry done!";
+                }
+            }, 1000);
+        }
+
+        function startCountdown() {
+            var sixtyMinutes = 60 * 60,
+                display = document.querySelector('#time');
+            startTimer(sixtyMinutes, display);
         }
     </script>
 
@@ -195,14 +230,22 @@
         </div>
 
         <div class="top_left_container">
-            <span class="page_title">WELCOME 2 COLLEGE LAUNDRY :)</span>
+            <span class="page_title">COLLEGE LAUNDRY <br>&#10024;BUDDY &#129530;</span>
         </div>
 
-        <div class="bottom_left_container">
+        <div class="middle_left_container">
             <span class="notes_title">NOTES:</span>
             <div class="light_green_container">
             </div>
-            <input type="button" value="clear" onclick="reset()">
+            <!-- <input type="button" value="clear" onclick="reset()"> -->
+            <div class="countdown">
+                <p id="time">60:00</p>
+                <button onclick="startCountdown()">Laundry Started</button>
+            </div>
+        </div>
+
+        <div class="bottom_left_container">
+            <button class="reset" onClick="window.location.reload();">RESET</button>
         </div>
 
         <div class="right_container">
